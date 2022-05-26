@@ -29,10 +29,16 @@ router.post('/', (req, res) => {
     .catch(error => res.status(400).send(error));
 })
 
-router.patch('/:id', (req, res) => {
+router.patch('/:id', async (req, res) => {
+    let bookArr = [];
     const id = req.params.id;
-    Author
-    .findByIdAndUpdate(id, {books: req.body.bookID})
+    await Author
+    .findById(id)
+    .then(data => bookArr = data.books);
+    bookArr.push(req.body.books);
+    console.log(bookArr);
+    await Author
+    .findByIdAndUpdate(id, {books: bookArr})
     .then(data => res.status(200).send(data))
     .catch(error => res.status(400).send(error));
 })

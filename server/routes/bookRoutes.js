@@ -21,7 +21,7 @@ router.get('/:id', (req, res) => {
 router.post('/', (req, res) => {
     const newBook = new Book({
         name: req.body.name,
-        description: Number(req.body.age),
+        description: req.body.description,
         author: req.body.author
     })
     newBook
