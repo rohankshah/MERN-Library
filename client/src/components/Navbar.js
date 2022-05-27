@@ -12,7 +12,7 @@ function Navbar() {
         <div className="bg-cyan-50 shadow-md">
             <div className="md:container mx-auto md:flex justify-between items-center">
                 <div className="text-teal-800 text-lg font-bold flex justify-between items-center p-5 md:py-6 md:px-0">
-                    <span>LIBRARY</span>
+                    <span>BOOKS</span>
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 md:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} onClick={handleToggle}>
                         <path strokeLinecap="round" strokeLinejoin="round" d={toggled ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
                     </svg>
