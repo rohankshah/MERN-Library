@@ -17,6 +17,14 @@ router.get('/:id', (req, res) => {
     .catch(error => res.status(400).send(error));
 })
 
+router.get('/populate/:id', (req, res) => {
+    Author
+    .findById(req.params.id)
+    .populate('books')
+    .then(data => res.status(200).send(data))
+    .catch(error => res.status(400).send(error));
+})
+
 router.post('/', (req, res) => {
     const newAuthor = new Author({
         name: req.body.name,

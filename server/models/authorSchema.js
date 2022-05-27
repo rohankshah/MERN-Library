@@ -9,7 +9,10 @@ const authorSchema = new Schema({
     },
     age: Number,
     country: String,
-    books: [mongoose.Schema.Types.ObjectId]
+    books: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'books',
+    }]
 })
 
 const Author = mongoose.model("authors", authorSchema);

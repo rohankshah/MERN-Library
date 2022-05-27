@@ -17,7 +17,7 @@ function Authors() {
             <h1 className="p-4 mt-4 text-center text-teal-800 text-xl font-bold underline underline-offset-4">Authors</h1>
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
                 {authors.map((author) => {
-                    return <Card name={author.name} key={author._id} url={author._id} />
+                    return <Card name={author.name} key={author._id} url={"/author/" + author._id} />
                 })}
             </div>
         </div>

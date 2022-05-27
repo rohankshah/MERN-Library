@@ -22,7 +22,7 @@ function Navbar() {
                         <a href="/">HOME</a>
                     </li>
                     <li className="px-4 py-4 shadow-md md:shadow-none md:py-0 md:px-4 hover:bg-teal-700 md:hover:bg-transparent hover:text-gray-800">
-                        <a href="/authors">AUTHORS</a>
+                        <a href="/author">AUTHORS</a>
                     </li>
                     <li className="px-4 py-4 shadow-md md:shadow-none md:py-0 md:px-4 hover:bg-teal-700 md:hover:bg-transparent hover:text-gray-800">
                         <a href="/book">BOOKS</a>
