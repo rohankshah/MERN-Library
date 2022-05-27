@@ -7,7 +7,7 @@ function AuthorDetails() {
     let { id } = useParams();
 
     useEffect(() => {
-        fetch("http://localhost:3001/author/populate/" + id)
+        fetch("https://fast-brushlands-15449.herokuapp.com/author/populate/" + id)
             .then(res => res.json())
             .then(data => {
                 setAuthor(data);

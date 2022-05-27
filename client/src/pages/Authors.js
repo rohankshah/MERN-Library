@@ -6,7 +6,7 @@ function Authors() {
     const [authors, setAuthors] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:3001/author")
+        fetch("https://fast-brushlands-15449.herokuapp.com/author")
         .then(res => res.json())
         .then(data => setAuthors(data))
         .catch(error => console.log(error));

@@ -8,11 +8,11 @@ function BookDetails() {
     const { id } = useParams();
 
     useEffect(() => {
-        fetch("http://localhost:3001/book/" + id)
+        fetch("https://fast-brushlands-15449.herokuapp.com/book/" + id)
             .then(res => res.json())
             .then(data => {
                 setBook(data);
-                fetch("http://localhost:3001/author/" + data.author)
+                fetch("https://fast-brushlands-15449.herokuapp.com/author/" + data.author)
                 .then(res => res.json())
                 .then(data => setAuthor(data.name))
                 .catch(error => console.log(error));

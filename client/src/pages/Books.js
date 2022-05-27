@@ -6,7 +6,7 @@ function Book() {
     const [books, setBooks] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:3001/book")
+        fetch("https://fast-brushlands-15449.herokuapp.com/book")
         .then(res => res.json())
         .then(data => setBooks(data))
         .catch(error => console.log(error));

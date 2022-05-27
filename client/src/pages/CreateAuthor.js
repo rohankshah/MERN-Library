@@ -28,7 +28,7 @@ function CreateAuthor() {
             country: country,
             age: age
         }
-        fetch("http://localhost:3001/author", {
+        fetch("https://fast-brushlands-15449.herokuapp.com/author", {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'

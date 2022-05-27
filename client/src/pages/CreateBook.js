@@ -31,7 +31,7 @@ function CreateBook() {
             description: description,
             author: authorId
         }
-        await fetch("http://localhost:3001/book", {
+        await fetch("https://fast-brushlands-15449.herokuapp.com/book", {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
@@ -43,7 +43,7 @@ function CreateBook() {
         .catch(error => console.log(error));
         
         // Get book ID
-        await fetch("http://localhost:3001/book", {
+        await fetch("https://fast-brushlands-15449.herokuapp.com/book", {
             method: "GET"
         })
         .then(res => res.json())
@@ -55,7 +55,7 @@ function CreateBook() {
 
         // Add bookID to author data
         
-        await fetch("http://localhost:3001/author/" + authorId, {
+        await fetch("https://fast-brushlands-15449.herokuapp.com/author/" + authorId, {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
@@ -71,7 +71,7 @@ function CreateBook() {
     }
 
     useEffect(() => {
-        fetch("http://localhost:3001/author")
+        fetch("https://fast-brushlands-15449.herokuapp.com/author")
             .then(res => res.json())
             .then(data => setAllAuthors(data))
             .catch(error => console.log(error));
